@@ -30,4 +30,10 @@ public class CustomerService {
 
         return customerDtoConverter.convertToAccountCustomer(customerRepository.save(customer));
     }
+
+    public CustomerDto getCustomerById(String customerId) {
+        return customerDtoConverter.convertCustomerDto(findCustomerById(customerId));
+
+
+    }
 }
